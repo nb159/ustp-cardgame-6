@@ -10,6 +10,6 @@ describe('utils.cn', () => {
 
   it('joins multiple class names and filters falsy values', () => {
     const result = cn('text-sm', false && 'hidden', 'font-bold')
-    expect(result).toBe('text-sm font-bold')
+    expect(result).toBe('text-m font-bold')
   })
 })
