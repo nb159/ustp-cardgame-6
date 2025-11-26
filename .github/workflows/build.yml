@@ -3,7 +3,7 @@ name: Build Application
 on:
   pull_request:
     branches:
-      -'**'
+      - '**'
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
           cache: 'npm'
       
       - name: install dep
-        run: npm install
+        run: npm ci
 
       - name: build application
         run: npm run build
