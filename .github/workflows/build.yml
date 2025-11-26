@@ -22,5 +22,8 @@ jobs:
       - name: install dep
         run: npm ci
 
+      - name: Run test
+        run: npm test
+
       - name: build application
         run: npm run build
