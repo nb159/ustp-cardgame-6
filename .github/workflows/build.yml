@@ -1,0 +1,26 @@
+name: Build Application
+
+on:
+  pull_request:
+    branches:
+      -'**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: install dep
+        run: npm install
+
+      - name: build application
+        run: npm run build
